@@ -105,7 +105,7 @@ nezaplaceneObjednavky.forEach((item) => {
 
 const emaily = []
 nezaplaceneObjednavky.forEach((item) => {
-	identifikatory.push(`${item.uzivatel.jmeno} : <${item.uzivatel.email}>`)
+	emaily.push(`${item.uzivatel.jmeno} : <${item.uzivatel.email}>`)
 })
 
 
