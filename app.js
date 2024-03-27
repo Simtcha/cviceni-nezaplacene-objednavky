@@ -1,3 +1,4 @@
+
 console.log('Funguju!')
 
 const nezaplaceneObjednavky = [
@@ -84,6 +85,7 @@ const nezaplaceneObjednavky = [
 	},
 ]
 
+
 const processEmails = (emails) => {
 	document.querySelector('#emaily').textContent = emails.join(', ')
 }
@@ -92,9 +94,23 @@ const processIdentifiers = (identifiers) => {
 	document.querySelector('#identifikatory').textContent = identifiers.join(', ')
 }
 
+
+
 // Tyto dva řádky uprav podle zadání
 const identifikatory = []
+nezaplaceneObjednavky.forEach((item) => {
+	identifikatory.push(item.id)
+})
+
+
 const emaily = []
+nezaplaceneObjednavky.forEach((item) => {
+	identifikatory.push(`${item.uzivatel.jmeno} : <${item.uzivatel.email}>`)
+})
+
 
 processIdentifiers(identifikatory)
 processEmails(emaily)
+
+
+  
